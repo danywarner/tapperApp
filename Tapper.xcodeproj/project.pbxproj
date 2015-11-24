@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CAB02E1FDFAA66E48B4944A /* libPods-Tapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A7B60279EE4CAB4CDB2AAB /* libPods-Tapper.a */; };
 		655498751C04A8C40046DF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655498741C04A8C40046DF3B /* AppDelegate.swift */; };
 		655498771C04A8C40046DF3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655498761C04A8C40046DF3B /* ViewController.swift */; };
 		6554987A1C04A8C40046DF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655498781C04A8C40046DF3B /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A7B60279EE4CAB4CDB2AAB /* libPods-Tapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F8B4A5AB62CB5E1FF65049 /* Pods-Tapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.release.xcconfig"; sourceTree = "<group>"; };
 		655498711C04A8C40046DF3B /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		655498741C04A8C40046DF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655498761C04A8C40046DF3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6554987B1C04A8C40046DF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6554987E1C04A8C40046DF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655498801C04A8C40046DF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821E41440D664B9D2D48D1B8 /* Pods-Tapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapper/Pods-Tapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB02E1FDFAA66E48B4944A /* libPods-Tapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0192C796DFAA226580E64A80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				821E41440D664B9D2D48D1B8 /* Pods-Tapper.debug.xcconfig */,
+				64F8B4A5AB62CB5E1FF65049 /* Pods-Tapper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6111690314E804241755726F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A7B60279EE4CAB4CDB2AAB /* libPods-Tapper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		655498681C04A8C40046DF3B = {
 			isa = PBXGroup;
 			children = (
 				655498731C04A8C40046DF3B /* Tapper */,
 				655498721C04A8C40046DF3B /* Products */,
+				0192C796DFAA226580E64A80 /* Pods */,
+				6111690314E804241755726F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 655498831C04A8C40046DF3B /* Build configuration list for PBXNativeTarget "Tapper" */;
 			buildPhases = (
+				B187036DDF0CD3617F15FF1F /* Check Pods Manifest.lock */,
 				6554986D1C04A8C40046DF3B /* Sources */,
 				6554986E1C04A8C40046DF3B /* Frameworks */,
 				6554986F1C04A8C40046DF3B /* Resources */,
+				383D47175C0075A0B67097F1 /* Embed Pods Frameworks */,
+				75A1965EFBA0D71D114EA9C7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		383D47175C0075A0B67097F1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75A1965EFBA0D71D114EA9C7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tapper/Pods-Tapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B187036DDF0CD3617F15FF1F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6554986D1C04A8C40046DF3B /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		655498841C04A8C40046DF3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821E41440D664B9D2D48D1B8 /* Pods-Tapper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tapper/Info.plist;
@@ -256,6 +332,7 @@
 		};
 		655498851C04A8C40046DF3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F8B4A5AB62CB5E1FF65049 /* Pods-Tapper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tapper/Info.plist;
@@ -284,6 +361,7 @@
 				655498851C04A8C40046DF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
